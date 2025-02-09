@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
 <style>
-    .profile-menu {
+     .profile-menu {
         position: relative;
         display: flex;
         align-items: center;
@@ -60,6 +60,61 @@
     .profile-icon {
         font-size: 15px;
     }
+     .news-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #f0f0f0;
+}
+
+.read-more-btn {
+    margin-left: auto;
+}
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    margin-bottom: 10px;
+}
+
+.news-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensures proper spacing */
+}
+
+.vertical-separator {
+    width: 5px;
+    height: 25px; /* Increased for better visibility */
+    background-color: rgba(0, 0, 0, 0.5);
+}y: inline-block; /* Ensures it behaves as a visible block */
+}
+
+.top-header-area {
+     margin-left:100px;
+}
+
+
+
+.site-logo img {
+    height: 80px; /* Adjust the logo size */
+  /* Add spacing if needed */
+}
+
+
+
 </style>
 </head>
 <body>

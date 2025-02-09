@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +9,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>E-news</title>
+	<title>Fruitkha - Slider Version</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -30,12 +32,34 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
+
 <style>
-.btn btn-orange{
-background:orange;
-color:black;
+.login-header {
+    /* background-color: #007bff; Color for Login Page heading */
+    color: black;
+    text-align: center;
+    padding: 15px;
 }
-    .profile-menu {
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color:rgb(124, 220, 111);
+    border-color:rgb(124, 220, 111);
+}
+
+.btn-primary:hover {
+    background-color: #08343d;
+    border-color: #08343d;
+}
+    label{
+        color: #060708;
+        font-weight: bolder;    
+        
+    }
+ .profile-menu {
         position: relative;
         display: flex;
         align-items: center;
@@ -102,8 +126,9 @@ color:black;
     background-color: rgba(0, 0, 0, 0.5);
 }y: inline-block; /* Ensures it behaves as a visible block */
 }
+
 .top-header-area {
-     margin-left:100px;
+     margin-left:50px;
 }
 
 
@@ -111,11 +136,12 @@ color:black;
 .site-logo img {
     height: 80px; /* Adjust the logo size */
   /* Add spacing if needed */
-}\
+}
 .top-header-area {
 
 background-color: #051922;
 }
+
 
 </style>
 </head>
@@ -130,7 +156,7 @@ background-color: #051922;
 	    <!--PreLoader Ends-->
 		
 		<!-- header -->
-		<div class="top-header-area " id="sticker">
+		<div class="top-header-area mb-5" id="sticker">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-sm-12 text-center">
@@ -181,132 +207,63 @@ background-color: #051922;
 			</div>
 		</div>
 		<!-- end header -->
-		
-		<!-- search area -->
-		<div class="search-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<span class="close-btn"><i class="fas fa-window-close"></i></span>
-						<div class="search-bar">
-							<div class="search-bar-tablecell">
-								<h3>Search For:</h3>
-								<input type="text" placeholder="Keywords">
-								<button type="submit">Search <i class="fas fa-search"></i></button>
-							</div>
+	
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end search area -->
-		
-		<section>
-		 <div class="container d-flex justify-content-center my-5">
-       <h1 class="mt-3">Admin Site</h1>
-    </div>
-    <div class="container bg-white text-dark  bg-body w-100 my-3">
-        <!-- <div class="container bg-white text-dark shadow-lg bg-body rounded w-100 ">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 bg-white text-dark">
-                    <p class="text-success">Home <span class="text-dark">| DASHBOARD</span></p>
+	</div>
+	<!-- end search area -->
+	    
+  <div class="container mt-5" >
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mt-5">
+                    <div class="card-header travel-header"> <!-- Apply travel-header class -->
+                        <h4>E-news</h4>
+                    </div>
+                    <div class="card-header login-header"> <!-- Apply login-header class -->
+                        <h4>Login to Your Account</h4>
+                    </div>
+                    <div class="card-body">
+                        <form  id="loginform" action="logincheck.php" method="post">
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email" style="background-color: transparent;">
+                               
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="Password" style="background-color: transparent;">
+                                
+                            </div>
+                            <div class="form-group form-check d-flex justify-content-between">
+                                <div>
+                                <a href="forgetpassword.php" style="margin-left:-15px;font-size:15px;">Forgot Password?</a>
+                                </div>
+                                <a href="registrationform.php" class="text-danger" style="font-size:15px;">Don't Have account?</a>
+                            </div>
+                            <button type="submit" name="submit" id="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div> -->
-
-<h3 class="text-uppercase text-center my-4">Dashboard</h3>
-        <div class="row gap-1">
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center ">
-                <h4>Welcome!</h4>
-                <?php
-$email=$_SESSION['email'];
-$con = mysqli_connect("localhost", "root", "", "project");
-$ans = mysqli_query($con, "select * from addadmin where aemail='$email'");
-while ($row = mysqli_fetch_array($ans)) {
-?>
-                <p><?php echo $row['aname']; ?></p>
-                <?php
-}
-?>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Profile"></a></p>
-
-            </div>
-            <?php
-            $con = mysqli_connect("localhost", "root", "", "project");
-            $ans = mysqli_query($con, "select * from package ");
-            $ans1 = mysqli_query($con, "select * from bookedpackage ");
-            $ans2 = mysqli_query($con, "select * from guide ");
-            $ans3 = mysqli_query($con, "select * from gallery ");
-           
-           
-            $ans5 = mysqli_query($con, "select * from review");
-            $ans6 = mysqli_query($con, "select * from honeymoon");
-            $ans7 = mysqli_query($con, "select * from addadmin");
-           
-            $p = mysqli_num_rows($ans);
-            $b = mysqli_num_rows($ans1);
-            $g = mysqli_num_rows($ans2);
-            $ga = mysqli_num_rows($ans3);
-           
-            $r = mysqli_num_rows($ans5);
-            $h = mysqli_num_rows($ans6);
-            $a = mysqli_num_rows($ans7);
-            ?>
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center">
-                <h4><?php echo $p ?></h4>
-                <p>Add News </p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Add News"></a></p>
-            </div>
-            <?php
-            $con = mysqli_connect("localhost", "root", "", "project");
-            $ans = mysqli_query($con, "select * from register ");
-            $u = mysqli_num_rows($ans);
-            ?>
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $u ?></h4>
-                <p>Total Users</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Check User"></a></p>
-            </div>
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $b ?></h4>
-                <p>Added News</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Added News"></a></p>
-            </div>
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $h ?></h4>
-                <p>Messages</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Contact Messages"></a></p>
-            </div>
-            
-           
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $p ?></h4>
-                <p>Availabe News</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Availabe News"></a></p>
-            </div>
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $r ?></h4>
-                <p>Review</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Check Review"></a></p>
-            </div>
-           
-
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $a ?></h4>
-                <p>Total Admin</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Add Admin"></a></p>
-            </div>
-            
-            <div class="container p-3 col-12 col-sm-12 col-md-5 bg-white shadow-lg bg-body rounded text-center my-3">
-                <h4><?php echo $u ?></h4>
-                <p>Total User</p>
-          <p><a href="adminprofile.php" class="w-auto rounded text-center"><input type="submit" value="Add User"></a></p>
             </div>
         </div>
     </div>
-		</section>
-		
-		<!-- footer -->
+    
+<!-- footer -->
 		<div class="footer-area">
 			<div class="container">
 				<div class="row">
@@ -399,4 +356,6 @@ while ($row = mysqli_fetch_array($ans)) {
 		<script src="assets/js/main.js"></script>
 	
 	</body>
-	</html>
+	</html>	
+	
+	
